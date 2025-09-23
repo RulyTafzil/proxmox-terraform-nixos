@@ -8,7 +8,7 @@ variable "proxmox_host" {
 }
 #Specify which template name you'd like to use
 variable "template_name" {
-    default = "debian-13-standard_13.1-1_amd64.tar.gz"
+    default = "debian-13-standard_13.1-1_amd64.tar.zst"
 }
 #Establish which nic you would like to utilize
 variable "nic_name" {
@@ -22,7 +22,6 @@ variable "vlan_num" {
 #It is safe to default to setting this as the URL for what you used
 #as your `proxmox_host`, although they can be different
 variable "api_url" {
-    default = "https://192.168.2.220:8006/api2/json"
 }
 #Blank var for use by terraform.tfvars
 variable "token_secret" {

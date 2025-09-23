@@ -32,13 +32,13 @@ resource "proxmox_lxc" "lxc-test" {
         ip = "dhcp"
         ip6 = "dhcp"
     }
-    ostemplate = "local:vztmpl/debian-13-standard_13.1-1_amd64.tar.zst"
+    ostemplate = "local:vztmpl/${var.template_name}"
     rootfs {
         storage = "local-zfs"
         size    = "4G"
     }
     password = "rootroot"
     pool = "terraform"
-    target_node = "pve"
+    target_node = var.proxmox_host
     unprivileged = true
 }
