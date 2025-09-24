@@ -1,0 +1,5 @@
+#Rename this file "terraform.tfvars"
+
+token_id = "Token ID Established in Proxmox"
+token_secret = "Token Secret Established in Proxmox"
+api_url = "https://[Proxmox URL]/api2/json"
